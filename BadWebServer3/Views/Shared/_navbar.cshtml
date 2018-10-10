@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Bad Web Server</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item"><a class="nav-link" href="/home/index">Home</a></li>
+            @if (!this.Context.Request.Cookies.ContainsKey("SignedInUsername"))
+            {
+                <li class="nav-item"><a class="nav-link" href="/Account/Register">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Account/SignIn">Sign In</a></li>
+            }
+            else
+            {
+                <li class="nav-item"><a class="nav-link" href="/Account/SignOut">Sign Out as @this.Context.Request.Cookies["SignedInUsername"] </a></li>
+            }
+        </ul>
+
+
+    </div>
+</nav>

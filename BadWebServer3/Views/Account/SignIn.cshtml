@@ -1,0 +1,16 @@
+﻿@model BadWebServer.Models.User
+@{
+    ViewBag.Title = "Sign In";
+}
+<div asp-validation-summary="All"></div>
+<form method="post">
+    <div>
+        <label asp-for="Username"></label>
+        <input asp-for="Username" required type="email" />
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" required type="password" pattern="[a-zA-Z0-9-]{8,}" title="Use at least 8 letters or numbers" />
+    </div>
+    <input type="submit" value="Sign In" />
+</form>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User>
+    <Username>team@codingtemple.com</Username>
+    <Password>password</Password>
+  </User>
+  <User>
+    <Username>joe@codingtemple.com</Username>
+    <Password>myPassword</Password>
+  </User>
+  <User>
+    <Username>derek@codingtemple.com</Username>
+    <Password>derek</Password>
+  </User>
+  <User>
+    <Username>team2@codingtemple.com</Username>
+    <Password>password</Password>
+  </User>
+  <User>
+    <Username>a@a</Username>
+    <Password>password</Password>
+  </User>
+  <User>
+    <Username>bill@codingtemple.com</Username>
+    <Password>billPassword</Password>
+  </User>
+  <User>
+    <Username>bill2@codingtemple.com</Username>
+    <Password>billPassword</Password>
+  </User>
+  <User>
+    <Username>team3@codingtemple.com</Username>
+    <Password>password</Password>
+  </User>
+</ArrayOfUser>

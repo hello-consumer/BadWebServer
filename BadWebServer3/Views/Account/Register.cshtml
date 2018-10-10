@@ -1,0 +1,29 @@
+﻿
+@model BadWebServer.Models.User
+@{
+    ViewBag.Title = "Register";
+}
+<div asp-validation-summary="All"></div>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Username"></label>
+        <input asp-for="Username" required type="email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" required type="password" pattern="[a-zA-Z0-9-]{8,}" title="Use at least 8 letters or numbers" />
+    </div>
+    <input type="submit" value="Register" class="btn btn-primary" />
+
+
+</form>
+
+@section scripts{ 
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $('form').submit((e) => {
+                console.log("Register Called");
+            });
+        });
+    </script>
+}
