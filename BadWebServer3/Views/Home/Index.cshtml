@@ -1,4 +1,4 @@
-﻿@model IEnumerable<string>
+﻿@model IEnumerable<BadWebServer.Data.Item>
 @{
     ViewBag.Title = "Home";
 }
@@ -7,15 +7,15 @@
     <div class="col-12 col-md-6">
         <table class="table table-striped">
             <tbody>
-                @foreach (string s in Model)
+                @foreach (BadWebServer.Data.Item i in Model)
                 {
                 <tr>
                     <td>
-                        @s
+                        @i.Value
                     </td>
                     <td>
                         <form method="POST" action="/Home/Delete">
-                            <input type="hidden" value="@s" name="name" />
+                            <input type="hidden" value="@i.Value" name="name" />
                             <input type="submit" value="Delete" class="btn btn-danger" />
                         </form>
                     </td>
